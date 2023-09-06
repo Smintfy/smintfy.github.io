@@ -1,6 +1,7 @@
 body {
     display: flex;
     padding: 64px;
+    flex-direction: column;
     align-items: flex-start;
     gap: 32px;
 
@@ -8,33 +9,117 @@ body {
     font-family: Inter;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 28px; /* 155.556% */
+    line-height: 24px; /* 150% */
     letter-spacing: -0.32px;
+}
+
+::selection {
+    color:white;
+    background: #2dd4bf;
 }
 
 p {
     margin: 0;
     padding: 0;
-    font-size: 18px;
-    color: #404040;
+    font-size: 16px;
+}
+
+a {
+    color: var(--color-neutral-500, #737373);
+}
+
+a:hover {
+    color: var(--color-neutral-800, #262626);
+}
+
+.heading {
+    font-weight: 500;
+}
+
+.text-secondary {
+    color: var(--color-neutral-500, #737373);
+}
+
+.disabled {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .container {
     display: flex;
+    width: 448px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 64px;
+    gap: 48px;
 }
 
-.content {
+.title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.title-image {
+    border-radius: 50%;
+}
+
+.title-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
 }
 
-.links {
+.description {
     display: flex;
-    gap: 64px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 96px;
+    align-self: stretch;
+}
+
+.description-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
+    color: var(--color-neutral-500, #737373);
+}
+
+.input {
+    display: flex;
+    width: 336px;
+    padding: 4px 4px 4px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--color-neutral-200, #E5E5E5);
+    background: var(--color-neutral-50, #FAFAFA);
+}
+
+.button {
+    display: flex;
+    height: 36px;
+    padding: 0px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    background: var(--color-neutral-800, #262626);
+}
+
+.button:hover {
+    cursor: pointer;
+    background: var(--color-neutral-800, #262626);
+    opacity: 90%;
 }
