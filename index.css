@@ -18,6 +18,24 @@ body {
     background: #2dd4bf;
 }
 
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 32px 24px;
+    }
+
+    body > .container {
+        width: 327px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+    }
+
+    .input {
+        align-self: stretch;
+    }
+}
+
 p {
     margin: 0;
     padding: 0;
